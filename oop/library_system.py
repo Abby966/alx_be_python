@@ -3,17 +3,16 @@ class Book:
         self.title = str(title)
         self.author = str(author)
 
-    def __str__(self):
-        return f"{self.title} by {self.author}"
+def __str__(self):
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
     def __init__(self, title, author, file_size):
         super().__init__(title, author)
         self.file_size = int(file_size)
-
-    def __str__(self):
-        return f"{super().__str__()} [EBook: {self.file_size}MB]"
+def __str__(self):
+    return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -22,8 +21,7 @@ class PrintBook(Book):
         self.page_count = int(page_count)
 
     def __str__(self):
-        return f"{super().__str__()} [PrintBook: {self.page_count} pages]"  # ✅ fixed missing quote
-
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 class Library:
     def __init__(self):
